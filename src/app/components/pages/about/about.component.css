@@ -1,0 +1,10 @@
+.about_block h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.about_block p {
+  text-transform: capitalize;
+  font-size: 18px;
+}

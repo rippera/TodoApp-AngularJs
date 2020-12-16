@@ -11,6 +11,7 @@ export class TodosComponent implements OnInit {
   constructor(public todosService: TodoService) {}
   public loading: boolean = true;
   public searchString: string = '';
+  public sortTodo: string = 'all';
   ngOnInit(): void {
     this.todosService
       .fetchTodos()

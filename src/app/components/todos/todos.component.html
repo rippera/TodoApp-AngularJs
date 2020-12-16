@@ -1,4 +1,5 @@
 <div class="todos_block" *ngIf="!loading">
+  <app-add-todo></app-add-todo>
   <div class="filter_block">
     <div class="row">
       <div class="col-lg-8">
@@ -10,7 +11,7 @@
         />
       </div>
       <div class="col-lg-4">
-        <select class="form-control">
+        <select class="form-control" [(ngModel)]="sortTodo">
           <option value="all">all</option>
           <option value="completed">completed</option>
           <option value="uncompleted">uncompleted</option>
@@ -21,19 +22,23 @@
   <ul class="list-group" *ngIf="todosService.todos.length; else noTodos">
     <li
       *ngFor="
-        let todo of todosService.todos | searchTodos: searchString;
+        let todo of todosService.todos
+          | searchTodos: searchString
+          | sortTodos: sortTodo;
         let i = index
       "
       class="list-group-item d-flex align-items-center justify-content-between"
     >
-      <div [class.done]="todo.completed">
+      <div [class.done]="todo.completed" class="d-flex align-items-center">
         <input
           type="checkbox"
           class="me-2"
           [checked]="todo.completed"
           (change)="onChange(todo.id)"
         />
-        {{ todo.title }}
+        <div>
+          <span class="me-2">({{ i + 1 }})</span>{{ todo.title }}
+        </div>
       </div>
       <div>
         <small class="me-5">{{ todo.date | date: "short" }}</small>
@@ -47,4 +52,4 @@
 <ng-template #noTodos>
   <p class="empty_report">todos list is empty</p>
 </ng-template>
-<p *ngIf="loading">loading ...</p>
+<p class="loading_" *ngIf="loading">loading ...</p>

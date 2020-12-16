@@ -10,6 +10,13 @@
   color: red;
   text-transform: capitalize;
 }
+.loading_ {
+  font-size: 18px;
+  color: red;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
 .filter_block {
   margin-bottom: 15px;
 }

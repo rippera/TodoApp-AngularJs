@@ -1,4 +1,5 @@
 <div class="add_todo_block">
+  <div *ngIf="show" class="alert alert-danger">please enter the title</div>
   <form class="form" (submit)="submitHandler()">
     <div class="d-flex align-items-center justify-content-between">
       <div class="input_block">

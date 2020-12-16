@@ -11,3 +11,8 @@
 .form-control {
   height: 45px;
 }
+.alert {
+  text-align: center;
+  font-size: 18px;
+  text-transform: capitalize;
+}
