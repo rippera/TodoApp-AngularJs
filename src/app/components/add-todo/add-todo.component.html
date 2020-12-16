@@ -1,0 +1,19 @@
+<div class="add_todo_block">
+  <form class="form" (submit)="submitHandler()">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="input_block">
+        <input
+          type="text"
+          name="title"
+          autocomplete="off"
+          class="form-control"
+          [(ngModel)]="title"
+          placeholder="Add new todo..."
+        />
+      </div>
+      <div class="button_block">
+        <button class="btn btn-success">add todo</button>
+      </div>
+    </div>
+  </form>
+</div>

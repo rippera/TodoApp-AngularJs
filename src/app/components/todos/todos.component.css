@@ -1,0 +1,15 @@
+.done {
+  text-decoration: line-through;
+}
+.list-group-item {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.empty_report {
+  font-size: 18px;
+  color: red;
+  text-transform: capitalize;
+}
+.filter_block {
+  margin-bottom: 15px;
+}
